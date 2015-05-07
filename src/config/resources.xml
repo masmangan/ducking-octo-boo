@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Resources>
+    <Resource id="0" name="Water" />
+    <Resource id="1" name="Food" />
+    <Resource id="2" name="Energy" />
+    <Resource id="3" name="Hydrogen" />
+    <Resource id="4" name="Lumber" />
+    <Resource id="5" name="Fertilizer" />
+    <Resource id="6" name="Iron" />
+    <Resource id="7" name="Steel" />
+    <Resource id="8" name="Silica" />
+    <Resource id="9" name="Glass" />
+    <Resource id="10" name="Minerals" />
+    <Resource id="11" name="Chemicals" />
+    <Resource id="12" name="Magnesium" />
+    <Resource id="13" name="Gauss rifle" />
+    <Resource id="14" name="Aluminium" />
+    <Resource id="15" name="Spaceship parts" />
+</Resources>

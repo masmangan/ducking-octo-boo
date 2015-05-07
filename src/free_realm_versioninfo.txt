@@ -1,0 +1,815 @@
+Version 0.1.3.9 (March 1, 2015)
+-----
+* Bugs in start of turn and end of turn are fixed.
+* Vegetation bug in Create map command is fixed.
+
+Version 0.1.3.8 (January 17, 2015)
+-----
+* Vegetation bug in Create map command is fixed.
+
+Version 0.1.3.7 (October 2, 2014)
+-----
+* "read" property of messages will not be initialized from XML. If a message is written to XML file, it is assumed already read.
+* Check added to TileType class for transformable tile types.
+
+Version 0.1.3.6 (September 28, 2014)
+-----
+* Resource & population are added to unit cost.
+* Buildable property updated.
+* Realm objects XML tag configuration updated.
+
+Version 0.1.3.5 (August 23, 2014)
+-----
+* Some Java performance tuning made.
+* "NotRemovedByTileTransformationProperty" added.
+* DestroyTileImprovement order added.
+* DestroyTileImprovementProperty added.
+* Order symbol type updated.
+* Tile improvement type symbol added.
+* Realm objects XML tag configuration updated.
+
+Version 0.1.3.4 (June 10, 2014)
+-----
+* Pathfinder updated.
+
+Version 0.1.3.3 (May 10, 2014)
+-----
+* Some XML serialization bugs fixed.
+* XML formats updated.
+* Test classes added.
+
+Version 0.1.3.2 (May 7, 2014)
+-----
+* SettlementImprovement tags updated.
+* Null check added to getMapHeight() and getMapWidth() methods in Realm.
+* Unit status is checked when movement points are reset at the start of a new turn. If unit is not active movement points are not reset.
+
+Version 0.1.3.1 (April 19, 2014)
+-----
+* Method added to ICommand to get the current executor.
+* FreeRealmConstants class added.
+
+Version 0.1.3.0 (March 25, 2014)
+-----
+* Improvement count method added to Settlement.
+* Method added to "Tile" returning number of units of type.
+* SettlementImprovementType updated to give maximum multipiler instead of maximum output.
+* XML format updated for settlement improvements.
+
+Version 0.1.2.9 (March 7, 2014)
+-----
+* "Resource wasted message" is updated / renamed to "Resource waste message".
+* "Resource waste message" is also sent before a resource is wasted.
+
+Version 0.1.2.8 (February 6, 2014)
+-----
+* Utility added to find total number of workers on a resource in a given settlement.
+
+Version 0.1.2.7 (January 12, 2014)
+-----
+* Occupied by player property added to tile.
+
+Version 0.1.2.6 (December 22, 2013)
+-----
+* Unit order mechanism updated. Checks added related to units and orders that can be executed by that unit.
+* Unit order queue logic updated.
+
+Version 0.1.2.5 (November 21, 2013)
+-----
+* Validity check added to TransformTileOrder.
+* Disabled settlement improvements are updated to have no upkeep.
+* Updated turn ending to generate 3 wealth for each free population per turn.
+
+Version 0.1.2.4 (October 9, 2013)
+-----
+* Name property added to units.
+* Unit XML serialization updated.
+
+Version 0.1.2.3 (September 29, 2013)
+-----
+* Realm XML serialization updated.
+
+Version 0.1.2.2 (September 15, 2013)
+-----
+* Updated realm initialization to read tile types before bonus resource types.
+* Updated CreateMapCommand to generate vegetation for random tiles.
+* Updated tile SetTileBonusResourceCommand.
+* Updated tile SetTileVegetationCommand.
+
+Version 0.1.2.1 (September 4, 2013)
+-----
+* Added custom property to vegetation.
+* Vegetation and VegetationType are seperated.
+
+Version 0.1.2.0 (August 17, 2013)
+-----
+* Properties variable added to Tile. Custom data can be stored in Tile like image type.
+* TileXMLConverter updated to serialize Properties variable.
+
+Version 0.1.1.9 (August 10, 2013)
+-----
+* BuildTileImprovement property updated.
+
+Version 0.1.1.8 (August 3, 2013)
+-----
+* Population change logic updated.
+* Population change manager added.
+
+Version 0.1.1.7 (July 21, 2013)
+-----
+* Random events added.
+* Random event generator added.
+
+Version 0.1.1.6 (June 23, 2013)
+-----
+* ModifyUnitTypeProperty updated to support changes in cargo capacity.
+
+Version 0.1.1.5 (June 9, 2013)
+-----
+* ModifyStartingWealth property added.
+* ModifyMaximumWorkers property is updated to be used by players. A player can have maximum workers per tile bonus.
+
+Version 0.1.1.4 (May 26, 2013)
+-----
+* Custom tile modifier added.
+
+Version 0.1.1.3 (April 27, 2013)
+-----
+* ModifyRequiredPopulationResourceAmount property added.
+* Custom fields added to player turn history.
+
+Version 0.1.1.2 (March 12, 2013)
+-----
+* Nation property handlers added.
+* SettlementAutomanageResourceCommand added.
+* SettlementAddAutomanagedResourceCommand added.
+* SettlementRemoveAutomanagedResourceCommand added.
+* ModifyUnitTypeProperty added to customize properties of a unit type. Modifying the given property of all unit types is also possible.
+
+Version 0.1.1.1 (February 7, 2013)
+-----
+* ChangeTileTypeProperty property added
+* TransformTileOrder added
+* Resources that are required for settlement growth are selectable, food is not default
+
+Version 0.1.1.0 (January 8, 2013)
+-----
+* ResetRealmCommand added
+
+Version 0.1.0.9 (December 11, 2012)
+-----
+* SetPlayerStatusCommand added
+
+Version 0.1.0.8 (October 3, 2012)
+-----
+* Message types added.
+
+Version 0.1.0.7 (September 14, 2012)
+-----
+* Turns needed to clear vegetation added
+
+Version 0.1.0.6 (September 12, 2012)
+-----
+* Add / Remove Vegetation commands added.
+
+Version 0.1.0.5 (September 7, 2012)
+-----
+* Vegetation added.
+* Mission management infrastructure update.
+
+Version 0.1.0.4 (August 5, 2012)
+-----
+* Add tile modifier command updated.
+* Tile modifier updated.
+
+Version 0.1.0.3 (August 1, 2012)
+-----
+* Tile modifier updated.
+* Mission management infrastructure update.
+
+Version 0.1.0.2 (July 13, 2012)
+-----
+* Modifier interface updated.
+* XML configuration updated for tile modifiers.
+
+Version 0.1.0.1 (July 8, 2012)
+-----
+* Modifier interface updated.
+* Bug fixes in settlement improvement modifiers.
+* Reward system added for missions.
+
+Version 0.1.0.0 (July 3, 2012)
+-----
+* Tile modifier interface updated to handle other types of modifiers like vegetation.
+* Default missions added :
+ - ExplorationMission
+ - PopulationMission
+ - SettlementCountMission,
+ - TileImprovementCountMission
+* Related XML configuration for default missions.
+
+Version 0.0.9.9 (June 27, 2012)
+-----
+* Missions updated.
+* XML serialization for player missions bug fix, load order changed.
+* XML serialization for mission manager.
+
+Version 0.0.9.8 (June 24, 2012)
+-----
+* Mission manager added.
+* XML configuration for mission manager added.
+* XML serialization for player missions.
+
+Version 0.0.9.7 (June 22, 2012)
+-----
+* Missions added to player.
+* End player turn command updated.
+
+Version 0.0.9.6 (June 7, 2012)
+-----
+* End player turn command modified, new handler update types added.
+* Minor additions to player turn history.
+
+Version 0.0.9.5 (June 3, 2012)
+-----
+* Unit class updated.
+* Unit XML serialization updated to handle custom properties.
+
+Version 0.0.9.4 (May 26, 2012)
+-----
+* Custom properties added to units.
+
+Version 0.0.9.3 (May 14, 2012)
+-----
+* BuySettlementProductionCommand bug fix.
+* End / start new turn logic modified. Observer update types added.
+
+Version 0.0.9.2 (May 3, 2012)
+-----
+* CityImprovementTypeImpXMLConverter format updated.
+
+Version 0.0.9.1 (April 25, 2012)
+-----
+* PrerequisitesXMLHelper bug fix.
+
+Version 0.0.9.0 (April 18, 2012)
+-----
+* PropertyFactory bug fixes.
+* Prerequisites XML serialization changed.
+* PrerequisitesXMLHelper added.
+
+Version 0.0.8.9 (April 14, 2012)
+-----
+* DefaultUnitGroupDefinition, UnitGroupDefinition added.
+* Updates made in UnitTypeManager.
+* Some XML formatters are updated to XML converters.
+* XMLConverterUtility updated.
+
+Version 0.0.8.8 (April 4, 2012)
+-----
+* WorkForceManager total workers bug fix.
+* Tile improvements updated.
+* NoTileImprovementPrerequisite added.
+* NoVegetationPrerequisite added.
+
+Version 0.0.8.7 (March 28, 2012)
+-----
+* ResourceProducer interface updated.
+
+Version 0.0.8.6 (March 23, 2012)
+-----
+* Settlement manager added to player.
+* Buildable interface updated for prerequisites.
+
+Version 0.0.8.5 (March 4, 2012)
+-----
+* Default messages added :
+ - SettlementImprovementCompletedMessage
+ - ResourceWastedMessage
+ - PlayerRemovedMessage
+* XML serialization for default messages added.
+
+Version 0.0.8.4 (February 17, 2012)
+-----
+* Message manager added.
+* XML serialization update for message manager.
+* End player turn command updated.
+
+Version 0.0.8.3 (January 22, 2012)
+-----
+* Player messages XML serialization added.
+* Player messages updated, getters/setters added for XML serialization / deserialization.
+
+Version 0.0.8.2 (January 16, 2012)
+-----
+* Player messages added.
+* End player turn command updated.
+* XML character encoding bug fix.
+
+Version 0.0.8.1 (January 14, 2012)
+-----
+* GoToCoordinate order bug fix.
+* Path finding algorithm updated.
+
+Version 0.0.8.0 (December 23, 2011)
+-----
+* All XML wrappers of properties are updated to XML converters.
+* GoToCoordinate order bug fix.
+
+Version 0.0.7.9 (November 21, 2011)
+-----
+* Unit orders XML serialization / deserialization update, bug fix.
+* Initialization error check in unit orders.
+* XML formatting in unit orders.
+
+Version 0.0.7.8 (November 3, 2011)
+-----
+* Some XML wrappers updated to XML converters.
+
+Version 0.0.7.7 (October 27, 2011)
+-----
+* Tag manager update for XML converter names.
+* Error checking added to tag manager.
+* UnloadAllCargoOrder bug fix for units that have no cargo capacity.
+
+Version 0.0.7.6 (October 15, 2011)
+-----
+* UnloadAllCargoOrder added.
+* GoToCoordinate order added.
+
+Version 0.0.7.5 (September 27, 2011)
+-----
+* Realm serialization update.
+* XML formatting.
+* New Javadoc added to commands.
+
+Version 0.0.7.4 (September 17, 2011)
+-----
+* Calculator utilities added for tiles.
+
+Version 0.0.7.3 (September 13, 2011)
+-----
+* Bonus resource logic updated.
+* XML serialization changed for tiles.
+* XML configuration added for bonus resources.
+
+Version 0.0.7.2 (August 31, 2011)
+-----
+* ResizeMapCommand added.
+* CaptureSettlementCommand added to cahnge owner of a settlement.
+* ClearTileImprovementsCommand added.
+* Javadoc added to commands.
+
+Version 0.0.7.1 (August 25, 2011)
+-----
+* Modifications in Resource class.
+* XML serialization changed for Resources.
+
+Version 0.0.7.0 (August 17, 2011)
+-----
+* Movement point modifier property added.
+* GeneralModifier interface added.
+
+Version 0.0.6.9 (August 15, 2011)
+-----
+* Production point modifier property added.
+* Tax modifier property updated.
+
+Version 0.0.6.8 (July 26, 2011)
+-----
+* Updates in unit fight property.
+* AttackUnitCommand added.
+* AttackTileCommand added.
+
+Version 0.0.6.7 (July 5, 2011)
+-----
+* Minor modifications in Unit class.
+* XML serialization changed for units.
+* SetDiplomaticStatusCommand added.
+
+Version 0.0.6.6 (July 2, 2011)
+-----
+* UnitActivateCommand added.
+* UnitSuspendCommand added.
+* Unit class modified.
+* XML serialization changed for units.
+* Suspended units coordinate bug fixed.
+
+Version 0.0.6.5 (June 30, 2011)
+-----
+* Unit status logic added.
+* Units that have "UNIT_ACTIVE" status can be played.
+* XML serialization changed for units.
+
+Version 0.0.6.4 (June 21, 2011)
+-----
+* SetPlayerStatusCommand added.
+* End turn logic updated. Passive players are auto-passed.
+
+Version 0.0.6.3 (June 12, 2011)
+-----
+* Player status logic added.
+* XML serialization changed for players.
+
+Version 0.0.6.2 (June 8, 2011)
+-----
+* ClearVegetation update code changed.
+* Tax modifier property added.
+* AddPlayerTurnHistoryCommand added.
+
+Version 0.0.6.1 (May 29, 2011)
+-----
+* Modify unit type propery updated to change unit cargo capacity.
+* XML serialization updates.
+
+Version 0.0.6.0 (May 21, 2011)
+-----
+* Settlement improvements may replace obsolete ones.
+* XML serialization changed for settlement improvements.
+* Settlement improvement upgrades modified.
+
+Version 0.0.5.9 (May 16, 2011)
+-----
+* Settlement improvement prerequisites logic updated.
+* Settlement improvement upgrades added.
+* XML serialization changed for settlement improvements.
+
+Version 0.0.5.8 (May 4, 2011)
+-----
+* Diplomacy XML serialization.
+* Custom modifiers added to tiles.
+* Tile XML serialization updated.
+
+Version 0.0.5.7 (April 30, 2011)
+-----
+* Settlement cost calculator utilities added.
+* Updates in workforce manager.
+* Population interval logic added to population increase/decrease manager.
+* Efficiency property added to settlements.
+
+Version 0.0.5.6 (April 21, 2011)
+-----
+* Simple diplomacy added.
+* New data added to turn history.
+* XML serialization for turn history updated.
+
+Version 0.0.5.5 (March 28, 2011)
+-----
+* Settlement improvement prerequisites added.
+* Settlement improvement XML configuration changed.
+* XML formatting for settlements.
+
+Version 0.0.5.4 (March 17, 2011)
+-----
+* Unit movement logic updated.
+* Allow movement property added.
+* Pathfinding updated.
+
+Version 0.0.5.3 (March 12, 2011)
+-----
+* Unit fight property updated.
+
+Version 0.0.5.2 (March 5, 2011)
+-----
+* Realm XML serialization updates.
+* Modify defence property added.
+* Modify maximum workers added.
+* XML formatting.
+
+Version 0.0.5.1 (February 28, 2011)
+-----
+* ModifyRequiredPopulationResourceAmount property added as a nation bonus.
+* Settlement population increase logic updated.
+* XML configuration for settlement population increase logic added.
+* XML formatting.
+
+Version 0.0.5.0 (February 22, 2011)
+-----
+* Container property updated.
+* Unit resource storage property upgraded to uniy container property.
+* Units can carry other units.
+* Units can carry population.
+* XML configuration for unit types updated.
+* SetContainerPopulationCommand added.
+
+Version 0.0.4.9 (February 14, 2011)
+-----
+* Unit resource storage property added.
+* XML configuration for unit types updated.
+* ResourceAddCommand updated to handle units.
+* ResourceRemoveCommand updated to handle units.
+
+Version 0.0.4.8 (February 9, 2011)
+-----
+* BonusResource added.
+* Tile modifier updated.
+* XML configuration for bonus resources.
+* XML serialization for tiles updated.
+
+Version 0.0.4.7 (February 1, 2011)
+-----
+* Realm history added.
+* Turn history added.
+* Player history added.
+* EndTurnCommand updated.
+* XML serialization for realm updated.
+
+Version 0.0.4.6 (January 21, 2011)
+-----
+* Updates in "Property" structure.
+* XML configuration for properties updated.
+* Modify unit type property added.
+* Javadoc added to some command classes.
+* Minor updates in units.
+
+Version 0.0.4.5 (January 19, 2011)
+-----
+* Modify unit cost property added.
+* Modify unit upkeep cost property added.
+* Modify production property added.
+* Modify settlement improvement cost property added.
+* Modify settlement improvement upkeep cost property added.
+* XML configuration for properties updated.
+
+Version 0.0.4.4 (January 14, 2011)
+-----
+* National bonus properties logic added. Same property structure in units, tiles and settlements will be used.
+* Modify tax income property added.
+* Modify starting wealth property added.
+
+Version 0.0.4.3 (December 27, 2010)
+-----
+* Required input resources check added to EndPlayerTurnCommand.
+* XML configuration for settlement improvements updated.
+* Required resources for population increase updated.
+* Population increase/decrease logic updated.
+* Minor updates in map tiles made. "customProperties" added.
+
+Version 0.0.4.2 (December 21, 2010)
+-----
+* ProduceResource property added.
+* XML configuration for settlement improvements updated.
+* XML configuration for settlements updated.
+* Javadoc added to some command classes.
+
+Version 0.0.4.1 (December 16, 2010)
+-----
+* Settlement resource production logic added.
+* ResourceStorer property updated.
+* XML configuration for settlement improvements updated.
+* Tile transformation logic updated, required turns added.
+* XML configuration tile types changed.
+
+Version 0.0.4.0 (December 9, 2010)
+-----
+* Tile transformation logic added.
+* XML configuration tile types changed, added transformable tile types.
+* ChangeTileTypeProperty added.
+* SetTileTypeCommand added.
+
+Version 0.0.3.9 (December 3, 2010)
+-----
+* UnitAdvanceToCoordinateCommand (using pathfinder) added.
+* Pathfinder algorithm updated.
+* New properties are added to "Move".
+* SaveRealmCommand removed.
+
+Version 0.0.3.8 (November 26, 2010)
+-----
+* Pathfinder utility to find shortest possible path between two coordinates added.
+* Unit type XML configuration updated.
+* Javadoc added to some command classes.
+
+Version 0.0.3.7 (November 3, 2010)
+-----
+* Tax rate logic updated.
+* EndPlayerTurnCommand updated.
+* Tax rate modifier property added to settlement improvements.
+* Unit movement possible only on certain tile types.
+
+Version 0.0.3.6 (October 30, 2010)
+-----
+* SettlementImprovementSetEnabledCommand added.
+* ClearTileImprovementsCommand added.
+* Unit movement property updated.
+
+Version 0.0.3.5 (October 25, 2010)
+-----
+* Enable / disable added to settlement improvements.
+* EndPlayerTurnCommand updated.
+* Disabled improvements do not have maintenance costs.
+* Unit movement property updated.
+
+Version 0.0.3.4 (October 22, 2010)
+-----
+* Tax rate added to player.
+* Settlement production logic updated to handle player tax rate.
+* EndPlayerTurnCommand updated.
+* XML serialization for world map updated.
+
+Version 0.0.3.3 (October 19, 2010)
+-----
+* AddTileImprovementCommand added.
+
+Version 0.0.3.2 (October 11, 2010)
+-----
+* Property updated for tile improvements. Resource production increase added.
+* XML configuration for tile improvements updated.
+* Resources updated.
+
+Version 0.0.3.1 (October 5, 2010)
+-----
+* Property updated for units to build tile improvements. Required number of turns added.
+* XML configuration for tile improvements updated.
+* Units updated.
+* Tiles updated.
+* Javadoc added to some command classes.
+
+Version 0.0.3.0 (September 30, 2010)
+-----
+* Property added to units to build tile improvements.
+* XML configuration updated for tile types.
+* XML configuration for tile improvements updated.
+
+Version 0.0.2.9 (September 23, 2010)
+-----
+* Tile improvements added.
+* XML configuration for tile improvements added.
+
+Version 0.0.2.8 (September 16, 2010)
+-----
+* Tile modifiers added.
+
+Version 0.0.2.7 (September 13, 2010)
+-----
+* Active player handler updated.
+* Active unit handler updated.
+* SetActivePlayerCommand added.
+* SetActiveUnitCommand added.
+
+Version 0.0.2.6 (August 31, 2010)
+-----
+* Settlement converted to interface.
+* FreeRealmSettlement added.
+* XML serialization updated for settlements.
+
+Version 0.0.2.5 (August 9, 2010)
+-----
+* Tile converted to interface.
+* FreeRealmTile added.
+* XML serialization updated for tiles.
+
+Version 0.0.2.4 (July 24, 2010)
+-----
+* Player converted to interface.
+* FreeRealmPlayer added.
+
+Version 0.0.2.3 (July 6, 2010)
+-----
+* StartPlayerTurnCommand added.
+* New turn tasks added.
+* TagManager added for managing tags in XML serialization.
+* ResetRealmCommand added.
+* XML serialization updated for settlements.
+
+Version 0.0.2.2 (June 19, 2010)
+-----
+* Major update in XML serialization. XMLConverter<Type> added.
+* Realm can be serialized and deserialized successfully.
+
+Version 0.0.2.1 (May 23, 2010)
+-----
+* New Settlement build property added to units.
+* InitializeRealmCommand added.
+* SetSettlementPopulationCommand added.
+
+Version 0.0.2.0 (May 12, 2010)
+-----
+* Unit orders are moved to a seperate project.
+* XML serialization added to orders.
+* Unit properties are added to handle orders.
+
+Version 0.0.1.9 (May 10, 2010)
+-----
+* Fortify order added.
+* Sentry order added.
+
+Version 0.0.1.8 (April 30, 2010)
+-----
+* Unit orders added.
+* Settlement names added to nations.
+* Color property added to players.
+
+Version 0.0.1.7 (April 21, 2010)
+-----
+* Settlements are updated to store resources.
+* ResourceAddCommand added.
+* ResourceRemoveCommand added.
+* EndTurnCommand updated to remove required resources from settlements.
+
+Version 0.0.1.6 (April 18, 2010)
+-----
+* Unit properties updated.
+
+Version 0.0.1.5 (April 16, 2010)
+-----
+* EndTurnCommand updated.
+* EndPlayerTurnCommand added.
+* AddUnitCommand added.
+* RemoveUnitCommand added.
+* XML serialization updated for settlements.
+* ReadMapFileCommand added.
+
+Version 0.0.1.4 (April 11, 2010)
+-----
+* EndTurnCommand updated.
+* AddPlayerCommand added.
+* XML serialization updated for settlements.
+* ReadMapFileCommand added.
+
+Version 0.0.1.3 (March 31, 2010)
+-----
+* Commands moved to a seperate project.
+* Settlement workforce logic added.
+* XML serialization for settlements updated.
+
+Version 0.0.1.2 (March 27, 2010)
+-----
+* XML serialization moved to a seperate project.
+
+Version 0.0.1.1 (March 24, 2010)
+-----
+* XML serialization added to realm.
+* XML serialization added to resources.
+* LoadRealmCommand added.
+* SaveRealmCommand added.
+
+Version 0.0.1.0 (March 15, 2010)
+-----
+* First properties added to settlement improvements.
+* Settlement improvement type XML configuration updated.
+* XML serialization added to settlements.
+
+Version 0.0.0.9 (March 7, 2010)
+-----
+* Settlement production updated. Settlements can continue to produce same unit.
+* Properties XML configuration updated.
+* EndTurnCommand updated.
+
+Version 0.0.0.8 (March 6, 2010)
+-----
+* Settlement production updated. Settlements can produce units.
+* EndTurnCommand updated.
+
+Version 0.0.0.7 (March 4, 2010)
+-----
+* Settlement production added. Settlements can produce settlement improvements.
+* XML configuration added for settlement improvement types.
+
+Version 0.0.0.6 (March 3, 2010)
+-----
+* EndTurnCommand added.
+* Settlement population increase added.
+* Food added to required settlement resources.
+
+Version 0.0.0.5 (Februrary 27, 2010)
+-----
+* Properties and abilities are merged.
+* XML configuration updated for properties.
+* Tile resource production added.
+* Resources updated.
+
+Version 0.0.0.4 (Februrary 25, 2010)
+-----
+* XML serialization added for world map.
+* XML serialization added for tiles.
+* XML configuration added for nations.
+* MoveUnitCommand added to executor.
+
+Version 0.0.0.3 (Februrary 17, 2010)
+-----
+* Nations added.
+* Ids added to map items (unit, tile).
+* XML configuration added for properties.
+* XML configuration added for resources.
+* XML configuration added for tile types.
+* Command executor added.
+
+Version 0.0.0.2 (Februrary 11, 2010)
+-----
+* Settlement added to map tiles.
+* Settlement improvement types added.
+* Settlement improvements added.
+* Properties added to settlement improvements.
+
+Version 0.0.0.1 (Februrary 7, 2010)
+-----
+* Realm added.
+* World map added to realm.
+* Player added.
+* Unit added.
+* Ability added to units.
+* Unit movement methods added.
+* Resource added.
+* Tile added.
+* Tile types added.
