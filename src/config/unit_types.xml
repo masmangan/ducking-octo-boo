@@ -330,4 +330,24 @@
             <Fight attackPoints="50" defencePoints="10"/>
         </Properties>
     </UnitType>
+        <UnitType id="11" name="Peppa" explorationRadius="3" weightForContainer="2000">
+        <Properties>
+            <buildable_property>
+                <build_cost>10000</build_cost>
+                <upkeep_cost>40</upkeep_cost>
+            </buildable_property>
+            <move_property points="2">
+                <TileType>Plains</TileType>
+                <TileType>Desert</TileType>
+                <TileType>Wasteland</TileType>
+                <TileType>Ice</TileType>
+                <TileType>Tundra</TileType>
+                <TileType>Crater</TileType>
+                <TileType>Hills</TileType>
+                <TileType>Mountains</TileType>
+            </move_property>
+            <Fight attackPoints="10" defencePoints="7"/>
+            <DestroyTileImprovementProperty/>
+        </Properties>
+    </UnitType>
 </UnitTypes>
