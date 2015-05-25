@@ -173,12 +173,76 @@ public class PeppaAutomater extends AbstractUnitAutomater {
 	}
 
 	private boolean isScoutingNeeded(Unit peppa) {
-	
+		// esta função procura em um raio crescente de 1 a 10 unidades de medida
+        // todos os
+        // tiles não explorados.
+        // Caso tenha algum tile não explorado em um raio de 10 unidades de
+        // medida
+        // retorna true se não, não tem nada a ser explorado
+        // nossa unidade é capaz de ir a distancias mais afastadas, diferente do
+        // scout que só procura tiles com até 10 unidades de medida de distancia
+
+        for (int i = 1; i < 20; i++) {
+                List<Coordinate> circleCoordinates = freeMarsController
+                                .getFreeMarsModel().getRealm()
+                                .getCircleCoordinates(peppa.getCoordinate(), i);
+                for (Coordinate coordinate : circleCoordinates) {
+                        if (coordinate != null
+                                        && !peppa.getPlayer().isCoordinateExplored(coordinate)) {
+                                return true;
+                        }
+                }
+        }
 		return false;
 	}
 
 	private Coordinate findScoutingSite(Unit scout) {
-		
+		// código de scouting....
+        for (int i = 1; i < 10; i++) {
+                List<Coordinate> circleCoordinates = freeMarsController
+                                .getFreeMarsModel().getRealm()
+                                .getCircleCoordinates(scout.getCoordinate(), i);
+                List<Coordinate> candidateCoordinates = new ArrayList<Coordinate>();
+                for (Coordinate coordinate : circleCoordinates) {
+                        if (isCoordinateOkForScouting(scout, coordinate)) {
+                                candidateCoordinates.add(coordinate);
+                        }
+                }
+                Collections.shuffle(candidateCoordinates);
+                for (Coordinate candidateCoordinate : candidateCoordinates) {
+                        Tile tile = freeMarsController.getFreeMarsModel().getTile(
+                                        candidateCoordinate);
+                        if (scout.getPlayer().getSettlementCount() > 0
+                                        && tile.getCollectable() != null
+                                        && (tile.getCollectable() instanceof SpaceshipDebrisCollectable)) {
+                                return candidateCoordinate;
+                        }
+                }
+        }
+        for (int i = 1; i < 10; i++) {
+                List<Coordinate> circleCoordinates = freeMarsController
+                                .getFreeMarsModel().getRealm()
+                                .getCircleCoordinates(scout.getCoordinate(), i);
+                List<Coordinate> candidateCoordinates = new ArrayList<Coordinate>();
+                for (Coordinate coordinate : circleCoordinates) {
+                        if (isCoordinateOkForScouting(scout, coordinate)) {
+                                candidateCoordinates.add(coordinate);
+                        }
+                }
+                Collections.shuffle(candidateCoordinates);
+                for (int j = 4; j > 0; j--) {
+                        for (Coordinate candidateCoordinate : candidateCoordinates) {
+                                if (getUnexploredNeighborCount(candidateCoordinate) >= j) {
+                                        return candidateCoordinate;
+                                }
+                        }
+                        for (Coordinate candidateCoordinate : candidateCoordinates) {
+                                if (getUnexploredNeighborCount(candidateCoordinate) >= j) {
+                                        return candidateCoordinate;
+                                }
+                        }
+                }
+        }
 
 		return null;
 	}
