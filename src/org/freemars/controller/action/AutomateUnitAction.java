@@ -75,6 +75,7 @@ public class AutomateUnitAction extends AbstractAction {
         }
         UnitType engineerType = freeMarsController.getFreeMarsModel().getRealm().getUnitTypeManager().getUnitType("Engineer");
         UnitType scoutType = freeMarsController.getFreeMarsModel().getRealm().getUnitTypeManager().getUnitType("Scout");
-        return unitToOrder.getType().equals(engineerType) || unitToOrder.getType().equals(scoutType);
+        UnitType peppaType = freeMarsController.getFreeMarsModel().getRealm().getUnitTypeManager().getUnitType("Peppa");
+        return unitToOrder.getType().equals(engineerType) || unitToOrder.getType().equals(scoutType) || unitToOrder.getType().equals(peppaType);
     }
 }
