@@ -1,9 +1,13 @@
 package org.freemars.controller.action;
 
 import org.freemars.controller.FreeMarsController;
+
 import java.awt.event.ActionEvent;
+
 import javax.swing.AbstractAction;
+
 import org.freemars.unit.automater.EngineerAutomater;
+import org.freemars.unit.automater.PeppaAutomater;
 import org.freemars.unit.automater.ScoutAutomater;
 import org.freerealm.executor.command.SkipUnitCommand;
 import org.freerealm.executor.command.UnitSetAutomaterCommand;
@@ -32,6 +36,7 @@ public class AutomateUnitAction extends AbstractAction {
             if (unitToOrder.getAutomater() == null) {
                 UnitType scoutType = freeMarsController.getFreeMarsModel().getRealm().getUnitTypeManager().getUnitType("Scout");
                 UnitType engineerType = freeMarsController.getFreeMarsModel().getRealm().getUnitTypeManager().getUnitType("Engineer");
+                UnitType peppaType = freeMarsController.getFreeMarsModel().getRealm().getUnitTypeManager().getUnitType("Peppa");
                 UnitSetAutomaterCommand unitSetAutomaterCommand = null;
                 if (unitToOrder.getType().equals(engineerType)) {
                     EngineerAutomater engineerAutomater = new EngineerAutomater();
@@ -41,7 +46,13 @@ public class AutomateUnitAction extends AbstractAction {
                     ScoutAutomater scoutAutomater = new ScoutAutomater();
                     scoutAutomater.setFreeMarsController(freeMarsController);
                     unitSetAutomaterCommand = new UnitSetAutomaterCommand(unitToOrder, scoutAutomater);
+                } else if (unitToOrder.getType().equals(peppaType)){
+                	//adiciona peppa automater action
+                    PeppaAutomater peppaAutomater = new PeppaAutomater();
+                    peppaAutomater.setFreeMarsController(freeMarsController);
+                    unitSetAutomaterCommand = new UnitSetAutomaterCommand(unitToOrder, peppaAutomater);
                 }
+                
                 if (unitSetAutomaterCommand != null) {
                     freeMarsController.execute(unitSetAutomaterCommand);
                     freeMarsController.execute(new SkipUnitCommand(unitToOrder));
