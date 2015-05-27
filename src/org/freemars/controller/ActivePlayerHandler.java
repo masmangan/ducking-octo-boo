@@ -38,7 +38,7 @@ public class ActivePlayerHandler implements ControllerUpdateHandler {
 
     protected void manageAutomatedUnits(Player player) {
     	
-    	//concerta o concurrentError que acontencida quando era usado iterators
+    	//conserta o concurrentError que acontencida quando era usado iterators
         FreeMarsPlayer mplayer = (FreeMarsPlayer)player;
     	for(Map.Entry<Integer, Unit> entry : mplayer.getUnitManager().getUnits().entrySet()) {
     		Unit playerUnit = entry.getValue();
