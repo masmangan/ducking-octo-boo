@@ -1,6 +1,8 @@
 package org.freemars.controller;
 
 import java.util.Iterator;
+import java.util.Map;
+
 import org.apache.log4j.Logger;
 import org.freemars.player.FreeMarsPlayer;
 import org.freemars.ai.AIPlayer;
@@ -35,12 +37,15 @@ public class ActivePlayerHandler implements ControllerUpdateHandler {
     }
 
     protected void manageAutomatedUnits(Player player) {
-        Iterator<Unit> unitsIterator = player.getUnitsIterator();
-        while (unitsIterator.hasNext()) {
-            Unit playerUnit = unitsIterator.next();
+    	
+    	//concerta o concurrentError que acontencida quando era usado iterators
+        FreeMarsPlayer mplayer = (FreeMarsPlayer)player;
+    	for(Map.Entry<Integer, Unit> entry : mplayer.getUnitManager().getUnits().entrySet()) {
+    		Unit playerUnit = entry.getValue();
             if (playerUnit.getAutomater() != null) {
                 playerUnit.getAutomater().automate();
             }
-        }
+    	}
+
     }
 }
