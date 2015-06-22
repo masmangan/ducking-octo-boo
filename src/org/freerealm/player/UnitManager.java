@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListMap;
+
 import org.freerealm.UnitUpkeepCostCalculator;
 import org.freerealm.modifier.GeneralModifier;
 import org.freerealm.unit.Unit;
@@ -16,12 +19,12 @@ import org.freerealm.unit.UnitType;
 public class UnitManager {
 
     private Player player;
-    private TreeMap<Integer, Unit> units;
+    private ConcurrentSkipListMap<Integer, Unit> units;
     private Unit activeUnit;
 
     public UnitManager(Player player) {
         this.player = player;
-        units = new TreeMap<Integer, Unit>();
+        units = new ConcurrentSkipListMap<Integer, Unit>();
     }
 
     public Unit getNextUnit(Unit unit) {
@@ -65,7 +68,7 @@ public class UnitManager {
         return (Unit) units.get(id);
     }
 
-    public TreeMap<Integer, Unit> getUnits() {
+    public ConcurrentSkipListMap<Integer, Unit> getUnits() {
         return units;
     }
 
