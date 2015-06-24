@@ -1,7 +1,9 @@
 package org.freemars.ai;
 
 import java.util.List;
+
 import org.freemars.controller.FreeMarsController;
+import org.freemars.unit.automater.PeppaAutomater;
 import org.freemars.unit.automater.ScoutAutomater;
 import org.freerealm.executor.command.UnitSetAutomaterCommand;
 import org.freerealm.unit.Unit;
@@ -29,6 +31,17 @@ public class ScoutManager {
                 ScoutAutomater scoutAutomater = new ScoutAutomater();
                 scoutAutomater.setFreeMarsController(freeMarsController);
                 UnitSetAutomaterCommand unitSetAutomaterCommand = new UnitSetAutomaterCommand(scout, scoutAutomater);
+                freeMarsController.execute(unitSetAutomaterCommand);
+            }
+        }
+        
+        UnitType peppaUnitType = freeMarsController.getFreeMarsModel().getRealm().getUnitTypeManager().getUnitType("Peppa");
+        List<Unit> peppas = aiPlayer.getUnitsOfType(peppaUnitType);
+        for (Unit peppa : peppas) {
+            if (peppa.getAutomater() == null) {
+            	PeppaAutomater peppaAutomater = new PeppaAutomater();
+                peppaAutomater.setFreeMarsController(freeMarsController);
+                UnitSetAutomaterCommand unitSetAutomaterCommand = new UnitSetAutomaterCommand(peppa, peppaAutomater);
                 freeMarsController.execute(unitSetAutomaterCommand);
             }
         }
