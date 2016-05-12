@@ -354,5 +354,37 @@
             <name>UNIT_10_NW</name>
             <path>unit/10_NW.png</path>
         </image>
+		<image>
+            <name>UNIT_11_N</name>
+            <path>unit/11_N.png</path>
+        </image>
+        <image>
+            <name>UNIT_11_NE</name>
+            <path>unit/11_NE.png</path>
+        </image>
+        <image>
+            <name>UNIT_11_E</name>
+            <path>unit/11_E.png</path>
+        </image>
+        <image>
+            <name>UNIT_11_SE</name>
+            <path>unit/11_SE.png</path>
+        </image>
+        <image>
+            <name>UNIT_11_S</name>
+            <path>unit/11_S.png</path>
+        </image>
+        <image>
+            <name>UNIT_11_SW</name>
+            <path>unit/11_SW.png</path>
+        </image>
+        <image>
+            <name>UNIT_11_W</name>
+            <path>unit/11_W.png</path>
+        </image>
+        <image>
+            <name>UNIT_11_NW</name>
+            <path>unit/11_NW.png</path>
+        </image>
     </images>
 </FreeMarsImageConfiguration>

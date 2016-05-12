@@ -234,6 +234,11 @@ public class NewGameAction extends AbstractAction {
         UnitType engineerType = realm.getUnitTypeManager().getUnitType("Engineer");
         freeMarsController.execute(new AddUnitCommand(realm, player, new Unit(realm, engineerType, coordinate, player)));
         freeMarsController.execute(new AddUnitCommand(realm, player, new Unit(realm, engineerType, coordinate, player)));
+        
+        //adiciona peppa 
+        UnitType peppaType = realm.getUnitTypeManager().getUnitType("Peppa");
+        freeMarsController.execute(new AddUnitCommand(realm, player, new Unit(realm, peppaType, coordinate, player)));
+        freeMarsController.execute(new AddUnitCommand(realm, player, new Unit(realm, peppaType, coordinate, player)));
 
         UnitType shuttleType = realm.getUnitTypeManager().getUnitType("Shuttle");
         Unit shuttle = new Unit(realm, shuttleType, coordinate, player);
